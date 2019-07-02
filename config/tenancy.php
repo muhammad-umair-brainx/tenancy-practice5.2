@@ -145,7 +145,7 @@ return [
          * Abort application execution in case no hostname was identified. This will throw a
          * 404 not found in case the tenant hostname was not resolved.
          */
-        'abort-without-identified-hostname' => true,
+        'abort-without-identified-hostname' => false,
 
         /**
          * Time to cache hostnames in minutes. Set to false to disable.
@@ -275,7 +275,7 @@ return [
          * @info Useful for overriding the connection of third party packages.
          */
         'force-tenant-connection-of-models' => [
-//            App\User::class
+            App\User::class
         ],
         'force-system-connection-of-models' => [
 //            App\User::class

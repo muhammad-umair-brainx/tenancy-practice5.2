@@ -51,11 +51,11 @@ class CreateTenant extends Command
 //            $this->error("A tenant with name '{$name}' and/or '{$email}' already exists.");
 //            return;
 //        }
-        $hostname = $this->registerTenant($name, $email);
-        app(Environment::class)->tenant($hostname->website);
+        $website = $this->registerTenant($name, $email);
+        app(Environment::class)->tenant($website->website);
         // we'll create a random secure password for our to-be admin
         $password = str_random();
-        $this->info("Tenant '{$name}' is created and is now accessible at {$hostname->fqdn}");
+        $this->info("Tenant '{$name}' is created and is now accessible at {$website->fqdn}");
         $this->info("Admin {$email} can log in using password {$password}");
     }
 

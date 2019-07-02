@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'url_base' => env('APP_URL_BASE', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
